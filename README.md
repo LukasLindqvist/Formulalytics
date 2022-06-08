@@ -1,4 +1,4 @@
-Small formula 1 Schedule/Results project using Formula One API
+##Small formula 1 Schedule/Results project using Formula One API
 
 
 ## Available Scripts
