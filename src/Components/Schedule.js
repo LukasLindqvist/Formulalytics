@@ -106,7 +106,7 @@ function Schedule() {
                         <div className='sessionText'>
                             <h3>PRACTICE 1</h3>
                             <h4>FRI</h4>
-                            <h5>{data.round}</h5>
+                            <h5>{data.FirstPractice.time.slice(0,5)}</h5>
                         </div>
                         <div className='sessionText'>
                             <h3>QUALYFYING</h3>
@@ -147,7 +147,6 @@ function Schedule() {
     raceSchedule.splice(20,0, sprintRaceOutput[2])
     return (
         <>
-        {sprintRaceOutput}
          <div className='title'>
             <h2>Schedule</h2>
         </div>
