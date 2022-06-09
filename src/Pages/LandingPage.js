@@ -1,10 +1,9 @@
 import React from 'react';
-
+import Schedule from '../Components/Schedule';
+import '../Components/Schedule.css'
 function LandingPage() {
   return (
-    <div>
-        <h1>This is the Landing PageEEe</h1>
-    </div>
+    <Schedule/>
   )
 }
 

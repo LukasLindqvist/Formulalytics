@@ -1,0 +1,19 @@
+nav{
+    background-color: #620401;
+    height: 70px;
+}
+
+nav h1{
+    color: white;
+}
+
+nav li{
+    display: inline;
+    float: right;
+    color: white;
+    margin-right: 50px;
+}
+
+#rightNav{
+    margin-right: 200px;
+}

@@ -1,0 +1,88 @@
+body{
+    background-color: #F9F6F6 ;
+}
+
+.title{
+    margin-bottom: 20px;
+}
+
+.contentContainer{
+    display: flex;
+    width: 1440px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.scheduleContainer{
+    display: flex;
+    width: 100%;
+    height: 200px;
+}
+
+.scheduleRace {
+    display: flex;
+    width: 930px;
+    height: 200px;
+}
+
+#flagImg{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+#trackMapImg{
+    position: absolute;
+    margin-top: 90px;
+    margin-left: 15px;
+}
+
+.sessionInfo{
+    background-color: #222222;
+    height: 170px;
+    width: 200px;
+    margin-left: 700px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.sessionText{
+    margin-top: 5px;
+}
+
+.sessionText h3{
+    color: white;
+    display: inline-block;
+    /* width set to lineup text verticaly */
+    width: 71px;
+    white-space: nowrap;
+    font-size: 12px;
+    margin-left: 15px;
+}
+.sessionText h4{
+    color: #B47B7B;
+    display: inline-block;
+    white-space: nowrap;
+    /* Width set to lineup text verticaly */
+    width: 19px;
+    font-size: 10px;
+    margin-left: 30px;
+}
+.sessionText h5{
+    color: white;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 10px;
+    margin-left: 25px;
+}
+.sessionText p{
+    color: white;
+    display: inline-block;
+    font-size: 10px;
+    margin-left: 25px;
+}
+
+.line{
+    margin-top: 10px;
+    border-top: 1px solid #FFFFFF;
+}
