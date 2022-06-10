@@ -1,5 +1,7 @@
 import React from 'react'
 import axios from 'axios'
+import ScrollStandings from '../Components/ScrollStandings';
+
 import { useEffect , useState } from 'react'
 import Cover from '../Images/Bahrain_Cover.png'
 import Country from '../Images/Bahrain_Flag.png'
@@ -40,7 +42,6 @@ function Schedule() {
     .map((data) => {      
         return(
             <React.Fragment key ={data.round}>
-            <div className='contentContainer'>
             <div className='scheduleContainer'>
                 <div className='scheduleRace'  style={{backgroundImage: `url(${Cover})`}} >
                     <img src={Country} alt='country flag' id='flagImg'></img>
@@ -79,7 +80,6 @@ function Schedule() {
                     </div>
                 </div>
             </div>
-        </div>
         </React.Fragment>
         )
     })
@@ -97,7 +97,6 @@ function Schedule() {
     .map((data) => {      
         return(
             <React.Fragment key ={data.round}>
-            <div className='contentContainer'>
             <div className='scheduleContainer'>
                 <div className='scheduleRace'  style={{backgroundImage: `url(${Cover})`}} >
                     <img src={Country} alt='country flag' id='flagImg'></img>
@@ -136,7 +135,6 @@ function Schedule() {
                     </div>
                 </div>
             </div>
-        </div>
         </React.Fragment>
         )
     })
@@ -150,7 +148,15 @@ function Schedule() {
          <div className='title'>
             <h2>Schedule</h2>
         </div>
-        {raceSchedule}    
+        <div className='schedule-container'>
+            <div className='schedule-child '>
+                {raceSchedule}        
+            </div>
+            <div className='schedule-child '>
+                <ScrollStandings/> 
+            </div>
+
+        </div>
         </>
         
     
