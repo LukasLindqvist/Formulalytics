@@ -1,11 +1,10 @@
 import React from 'react'
 import axios from 'axios'
 import ScrollStandings from '../Components/ScrollStandings';
-
 import { useEffect , useState } from 'react'
-import Cover from '../Images/Bahrain_Cover.png'
-import Country from '../Images/Bahrain_Flag.png'
-import Trackmap from '../Images/Bahrain_TrackMap.png'
+import { RaceCoverArr, SprintRaceCoverArr, RaceFlagArr, SprintRaceFlagArr, RaceTrackMapArr, SprintRaceTrackMapArr } from '../Images/ImageExports';
+
+
 function Schedule() {
 
     
@@ -15,7 +14,7 @@ function Schedule() {
     let config = {
         method: 'get',
         url: 'http://ergast.com/api/f1/current.json',
-        headers: { }
+        headers: {}
       };
     
     useEffect(() => {
@@ -39,14 +38,18 @@ function Schedule() {
             return true
 
     })
-    .map((data) => {      
+    .map((data,index) => {      
         return(
             <React.Fragment key ={data.round}>
             <div className='scheduleContainer'>
-                <div className='scheduleRace'  style={{backgroundImage: `url(${Cover})`}} >
-                    <img src={Country} alt='country flag' id='flagImg'></img>
-                    <img src={Trackmap} alt='Trackmap' id='trackMapImg'></img>
+                <div className='scheduleRace'  style={{backgroundImage: `url(${RaceCoverArr[index]})`}} >
+                    <img src={RaceFlagArr[index]} alt='country flag' id='flagImg'></img>
+                    <img src={RaceTrackMapArr[index]} alt='Trackmap' id='trackMapImg'></img>
                     <div className='sessionInfo'>
+                        <div className='sessionText'>
+                            <h5 id='raceName'>{data.raceName}</h5>
+                            <h6>{data.date}</h6>
+                        </div>
                         <div className='sessionText'>
                             <h3>PRACTICE 1</h3>
                             <h4>FRI</h4>
@@ -94,14 +97,18 @@ function Schedule() {
             return true
 
     })
-    .map((data) => {      
+    .map((data,index) => {      
         return(
             <React.Fragment key ={data.round}>
             <div className='scheduleContainer'>
-                <div className='scheduleRace'  style={{backgroundImage: `url(${Cover})`}} >
-                    <img src={Country} alt='country flag' id='flagImg'></img>
-                    <img src={Trackmap} alt='Trackmap' id='trackMapImg'></img>
+                <div className='scheduleRace'  style={{backgroundImage: `url(${SprintRaceCoverArr[index]})`}} >
+                    <img src={SprintRaceFlagArr[index]} alt='country flag' id='flagImg'></img>
+                    <img src={SprintRaceTrackMapArr[index]} alt='Trackmap' id='trackMapImg'></img>
                     <div className='sessionInfo'>
+                        <div className='sessionText'>
+                            <h5 id='raceName'>{data.raceName}</h5>
+                            <h6>{data.date}</h6>
+                        </div>
                         <div className='sessionText'>
                             <h3>PRACTICE 1</h3>
                             <h4>FRI</h4>
@@ -145,14 +152,11 @@ function Schedule() {
     raceSchedule.splice(20,0, sprintRaceOutput[2])
     return (
         <>
-         <div className='title'>
-            <h2>Schedule</h2>
-        </div>
-        <div className='schedule-container'>
-            <div className='schedule-child '>
-                {raceSchedule}        
+        <div className='content-container'>
+            <div className='schedule-races '>
+                {raceSchedule}       
             </div>
-            <div className='schedule-child '>
+            <div className='schedule-standings '>
                 <ScrollStandings/> 
             </div>
 

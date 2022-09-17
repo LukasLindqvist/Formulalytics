@@ -1,10 +1,21 @@
 import React from 'react';
+import ScrollStandings from '../Components/ScrollStandings';
+import ResultsTable from '../Components/ResultsTable';
+
+import '../Components/Result.css'
 
 function Result() {
   return (
-    <div>
-        <h3>This is the results page</h3>
-    </div>
+    <>
+      <div className='result-container'>
+        <div className='race-results '>
+          <ResultsTable/>  
+        </div>  
+        <div className='scroll-standings '>
+          <ScrollStandings/>
+        </div>
+      </div>
+    </>
   )
 }
 

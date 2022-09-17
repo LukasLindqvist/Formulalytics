@@ -1,0 +1,99 @@
+.result-container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+}
+
+.scroll-standings {
+    margin-top: 157px;
+}
+
+#resultsHeader{
+    margin-top: 50px;
+}
+
+.race-results h1 {
+    text-decoration: underline;
+}
+
+.button-container{
+    position: absolute;
+}
+
+.button-container img{
+    height: 30px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.race-results table{
+    margin-top: 30px;
+    border-collapse: collapse;
+    width: 800px;
+}
+
+.race-results th{
+    height: 50px;
+    background-color: #620401;
+    color: white
+}
+
+
+
+@media (max-width: 1080px){
+    .race-results{
+        width: 400px;
+    }
+
+    #resultsHeader{
+        margin-top: 60px;
+    }
+
+    .race-results table{
+        margin-top: 30px;
+        border-collapse: collapse;
+        width: 450px;
+    }
+
+    .scroll-standings{
+        margin-top: 167px;
+        margin-left: 80px;
+    }
+}
+
+@media (max-width: 750px){
+    .scroll-standings{
+        display: none;
+    }
+
+    .race-results{
+        grid-template-columns: 1fr;
+    }
+
+    .race-results table{
+        width: 600px;  
+    }
+}
+
+@media (max-width: 610px){
+    .race-results{
+        grid-template-columns: 1fr;
+    }
+
+    #resultsHeader{
+        margin-top: 95px;
+    }
+
+    .race-results table{
+        width: 200px;
+        font-size: 12px
+    }
+}
+
+@media (max-width: 370px){
+    #resultsHeader{
+        margin-top: 130px;
+    }
+
+}
+

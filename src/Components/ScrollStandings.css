@@ -2,8 +2,7 @@
     display: inline-block;
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
-    margin-top: 10px;
+    top: 25px;
     width: 360px;  
 }
 
@@ -16,6 +15,7 @@ table tr:nth-child(even) td{
 
 .standings table{
     border-collapse: collapse;
+    width: 360px;
 }
 .standingsHeader{
     display: flex;
@@ -47,5 +47,22 @@ table tr:nth-child(even) td{
 .standing tr, td{
     height: 35px;
     padding-left: 20px;
+}
+
+@media (max-width: 1320px){
+    .standingsHeader{
+        width: 255px;
+    }
+    .standings table{
+        width: 250px;
+    }
+    .standing tr,th {
+        text-align: left;
+        padding-left: 10px;
+    }
+    .standing tr, td{
+        height: 35px;
+        padding-left: 10px;
+    }
 }
 

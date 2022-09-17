@@ -5,13 +5,16 @@ import { Link } from 'react-router-dom'
 function Navbar() {
   return (
     <nav>
-        <h1>Formulalytics</h1>
+        
         <ul>
-          <Link to="/results">
-            <li id='rightNav'>Results</li>
+          <Link to="/">
+            <li id='navBrand'>Formulatytics</li>
           </Link>
           <Link to="/">
-            <li>Schedule</li>
+            <li className='right-nav' id='navSchedule'>Schedule</li>
+          </Link>
+          <Link to="/results">
+            <li className='right-nav' id='navResults'>Results</li>
           </Link>
         </ul>
     </nav>
